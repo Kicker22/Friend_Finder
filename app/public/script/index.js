@@ -1,3 +1,5 @@
+
+
 const questions = [
     {
       question: "I prefer to charge head first into battle!",
@@ -46,6 +48,11 @@ const questions = [
   let questionIndex = 0;
   let buttonValue = 0;
   let userChoices = [];
+  // var path = require("path")
+  var express = require("express")
+  // require("../../data/friends")
+  app.use(express.static("data"));
+
 
   function start() {
     // when the start button is clicked start the quiz
@@ -96,3 +103,13 @@ const questions = [
     appendAnswers()
     
   })
+
+  module.exports = userChoices;
+
+
+
+
+
+  
+
+  
