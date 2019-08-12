@@ -1,130 +1,162 @@
+// Class scores are based off what that class would input into the quiz.. as though they had taken the quiz
+// The user score will be compared against the class score
+// the class score that is the closest to the user score will be returned as the recomended class
 var data =
-{
-  name:"Warrior",
-  photo:"https://www.google.com/search?rlz=1C1CHBF_enUS837US838&biw=1920&bih=937&tbm=isch&sa=1&ei=RP9OXdY46ZbSAqHdpOgN&q=dungeons+and+dragons+fighter&oq=dungeons+and+dragons+fighter&gs_l=img.3..0l5j0i8i30l4j0i24.32336.39975..40186...14.0..0.109.2375.27j3......0....1..gws-wiz-img.......0i67.c-CdFeyTO2I&ved=0ahUKEwjW6q206vjjAhVpi1QKHaEuCd0Q4dUDCAY&uact=5#imgrc=iWhaHHN7lIg1hM:",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Rogue",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Wizzard",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Paladin",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Ranger",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Sorcerer",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Barbarian",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Cleric",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
-  name:"Bard",
-  photo:"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  scores:[
-      5,
-      1,
-      4,
-      4,
-      5,
-      1,
-      2,
-      5,
-      4,
-      1
-    ],
+  [
+    {
 
-}
+      name: "Warrior",
+      photo: "https://www.google.com/search?rlz=1C1CHBF_enUS837US838&biw=1920&bih=937&tbm=isch&sa=1&ei=RP9OXdY46ZbSAqHdpOgN&q=dungeons+and+dragons+fighter&oq=dungeons+and+dragons+fighter&gs_l=img.3..0l5j0i8i30l4j0i24.32336.39975..40186...14.0..0.109.2375.27j3......0....1..gws-wiz-img.......0i67.c-CdFeyTO2I&ved=0ahUKEwjW6q206vjjAhVpi1QKHaEuCd0Q4dUDCAY&uact=5#imgrc=iWhaHHN7lIg1hM:",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+    },
+    {
+
+      name: "Rogue",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+    },
+    {
+      name: "Wizzard",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+
+    },
+    {
+      name: "Paladin",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+
+    },
+    {
+      name: "Ranger",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+    },
+    {
+      name: "Sorcerer",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+    },
+    {
+
+      name: "Barbarian",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+
+    },
+    {
+
+      name: "Cleric",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+
+    },
+    {
+      name: "Bard",
+      photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+      scores: [
+        5,
+        1,
+        4,
+        4,
+        5,
+        1,
+        2,
+        5,
+        4,
+        1
+      ],
+
+    }
+
+  ]
+
+module.exports = data;

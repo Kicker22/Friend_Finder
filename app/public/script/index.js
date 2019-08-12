@@ -7,7 +7,41 @@ const questions = [
       question: "I tend to be opportunistic in my dealings with others",
       answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
     },
+    {
+      question: "You can usually find me in the local tavern.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
+    {
+      question: "I pledge my life to banishing evil and the unholy.",
+      answers: ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"]
+    },
   ]
+    
+
 
   let questionIndex = 0;
   let buttonValue = 0;
@@ -38,7 +72,7 @@ const questions = [
     for (let i = 0; i < answers.length; i++) {
       buttonValue++
       var button = $("<button>");
-      button.addClass(' btn btn-lg btn-dark mr-1 mb-2 choices')
+      button.addClass(' btn btn-md btn-dark mr-1 mb-2 choices')
       button.val(buttonValue)
       button.text(answers[i])
       $('.buttons').append(button)
@@ -48,15 +82,17 @@ const questions = [
   function clearQuestion() {
     $('.buttons').empty();
     $('.questions').empty();
+    buttonValue = 0;
   }
 
   $('body').on('click', '.choices', function () {
-    let userValues = $(this).val()
-    userChoices.push(userValues)
+    // var userValues = $(this).val()
+    userChoices.push($(this).val())
     questionIndex++
-    console.log(questionIndex);
+    // console.log(questionIndex);
     console.log(userChoices)
     clearQuestion()
     appendQuestion()
     appendAnswers()
+    
   })
