@@ -2,6 +2,8 @@ var path = require("path")
 const express = require("express")
 var classData = require("../data/friends")
 
+console.log(classData)
+
 module.exports = function (app) {
     app.get("/api/friends", function (req, res) {
 

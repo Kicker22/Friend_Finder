@@ -48,10 +48,7 @@ const questions = [
   let questionIndex = 0;
   let buttonValue = 0;
   let userChoices = [];
-  // var path = require("path")
-  var express = require("express")
-  // require("../../data/friends")
-  app.use(express.static("data"));
+  
 
 
   function start() {
