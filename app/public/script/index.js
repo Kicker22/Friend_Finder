@@ -104,7 +104,7 @@ const questions = [
     
   })
 
-  module.exports = userChoices;
+
 
 
 

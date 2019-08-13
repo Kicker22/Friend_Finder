@@ -6,7 +6,7 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/home.html"));   
     });
 
-    app.use(express.static("public"));
+    app.use(express.static("./app/public"));
 
     app.get("/survey", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/survey.html")); 
@@ -15,8 +15,8 @@ module.exports = function (app) {
         
 
     // If no matching route is found default to home
-    // app.get("/", function (req, res) {
-    //     res.sendFile(path.join(__dirname, "../public/home.html"));
-    // });
+    app.get("/", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/home.html"));
+    });
 
 }
