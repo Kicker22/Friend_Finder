@@ -16,9 +16,8 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 
+    
     app.post("/api/friends", function (req, res) {
-        for (let i = 0; i < res.length; i++) {
-            return res[i]
-        }
+        
     })
 }
