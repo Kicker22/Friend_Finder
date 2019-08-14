@@ -23,6 +23,6 @@ module.exports = function(app) {
       return res.status(400).json({ msg: "please include a name" });
     }
     data.push(newCharacter);
-    return res.json(data);
+    return res.json(data)
   });
 };
