@@ -7,6 +7,7 @@ module.exports = function (app) {
     });
 
     app.use(express.static("./app/public"));
+    app.use(express.static("./app/public"));
 
     app.get("/survey", function (req, res) {
         res.sendFile(path.join(__dirname, "../public/survey.html")); 
@@ -20,3 +21,4 @@ module.exports = function (app) {
     });
 
 }
+
